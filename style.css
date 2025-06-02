@@ -368,3 +368,101 @@ body {
   border-radius: 8px;
   overflow: hidden;
 }
+
+
+
+
+/* SERVICES TAB*/
+
+.services-section {
+  padding: 80px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.services-section .service {
+  margin-bottom: 60px;
+}
+
+.services-section h2 {
+  color: #2c5a94;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.services-section p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.9;
+}
+
+
+/* GALLERY */
+
+.gallery-section {
+  padding: 40px 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gallery-block {
+  margin-bottom: 80px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-block h2 {
+  color: #2c5a94;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-pair {
+  text-align: center;
+}
+
+.image-pair img {
+  width: 180px;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.testimonial-carousel {
+  max-width: 800px;
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+.testimonial {
+  display: none;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.testimonial.active {
+  display: block;
+}
+

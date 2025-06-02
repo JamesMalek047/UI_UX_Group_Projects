@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>NovaSmile | Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar"></div>
+    <nav class="navbar">
+      <div class="logo-section">
+        <img src="nova-logo.png" alt="NovaSmile Logo" class="logo"/>
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Dental Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="contact-button">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery-section">
+  <div class="gallery-block">
+    <h2>GENERAL DENTISTRY</h2>
+
+    <div class="image-row">
+      <div class="image-pair">
+        <img src="gallery1.png" alt="Before">
+      </div>
+      <div class="image-pair">
+        <img src="gallery1.png" alt="Before">
+      </div>
+      <div class="image-pair">
+        <img src="gallery1.png" alt="Before">
+      </div>
+    </div>
+
+    <div class="testimonial-carousel">
+      <p class="testimonial active">
+        I don’t think I could ever thank Dr.. My smile has been better than ever before.
+        I am in a lost of words. My life got better after my teeth got fixed.
+        I am crying tears of joy. – Melanie Malek
+      </p>
+      <p class="testimonial">I never imagined smiling confidently again. Thank you so much! – Alex B.</p>
+      <p class="testimonial">This clinic changed my life. 10/10 would recommend. – Sarah L.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="gallery-block">
+    <h2>ORTHODONTICS</h2>
+
+    <div class="image-row">
+      <div class="image-pair">
+        <img src="gallery2.png" alt="Before">
+      </div>
+      <div class="image-pair">
+        <img src="gallery2.png" alt="Before">
+      </div>
+      <div class="image-pair">
+        <img src="gallery2.png" alt="Before">
+      </div>
+    </div>
+
+    <div class="testimonial-carousel">
+      <p class="testimonial active">
+        I don’t think I could ever thank Dr.. My smile has been better than ever before.
+        I am in a lost of words. My life got better after my teeth got fixed.
+        I am crying tears of joy. – Melanie Malek
+      </p>
+      <p class="testimonial">I never imagined smiling confidently again. Thank you so much! – Alex B.</p>
+      <p class="testimonial">This clinic changed my life. 10/10 would recommend. – Sarah L.</p>
+    </div>
+  </div>
+  </section>
+
+  <section class="gallery-section">
+  <div class="gallery-block">
+    <h2>PERIODONTICS</h2>
+
+    <div class="image-row">
+      <div class="image-pair">
+        <img src="gallery3.png" alt="Before">
+      </div>
+      <div class="image-pair">
+        <img src="gallery3.png" alt="Before">
+      </div>
+      <div class="image-pair">
+        <img src="gallery3.png" alt="Before">
+      </div>
+    </div>
+
+    <div class="testimonial-carousel">
+      <p class="testimonial active">
+        I don’t think I could ever thank Dr.. My smile has been better than ever before.
+        I am in a lost of words. My life got better after my teeth got fixed.
+        I am crying tears of joy. – Melanie Malek
+      </p>
+      <p class="testimonial">I never imagined smiling confidently again. Thank you so much! – Alex B.</p>
+      <p class="testimonial">This clinic changed my life. 10/10 would recommend. – Sarah L.</p>
+    </div>
+  </div>
+  </section>
+
+
+  <footer class="footer">
+  <div class="footer-content">
+    <h3>NovaSmile Dental Clinic</h3>
+    <p>1285 Rue des Cerisiers<br>
+    Montréal, QC H3Z 2Y7<br>
+    Canada</p>
+    
+    <div class="footer-icons">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-solid fa-phone"></i>
+      <i class="fa-solid fa-envelope"></i>
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const allCarousels = document.querySelectorAll('.testimonial-carousel');
+
+  allCarousels.forEach(carousel => {
+    const testimonials = carousel.querySelectorAll('.testimonial');
+    let index = 0;
+
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 4000);
+  });
+</script>
+
+</body>
+</html>
