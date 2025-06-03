@@ -56,7 +56,7 @@ body {
 
 .contact-button {
   background-color: #3769a3;
-  color: white; /* <-- This makes the text white */
+  color: white; 
   padding: 10px 20px;
   border-radius: 2px;
   font-weight: 500;
@@ -177,7 +177,7 @@ body {
 
 .doctor-info {
   flex: 1;
-  min-width: 0; /* Allows it to shrink if needed */
+  min-width: 0;
 }
 
 
@@ -251,7 +251,7 @@ body {
 
 
 
-/*CONTACT PAGE*/
+/* CONTACT PAGE */
 
 .contact-section {
   font-family: 'Montserrat', sans-serif;
@@ -372,7 +372,7 @@ body {
 
 
 
-/* SERVICES TAB*/
+/* SERVICES TAB */
 
 .services-section {
   padding: 80px 40px;
@@ -399,7 +399,8 @@ body {
 }
 
 
-/* GALLERY */
+
+/* GALLERY TAB */
 
 .gallery-section {
   padding: 40px 40px;
