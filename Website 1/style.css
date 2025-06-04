@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top-bar {
+  height: 60px;
+  background-color: #3769a3;
+  border-bottom: 4px solid #45a9f9;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 20px 40px;
+
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 50px;
+}
+
+.logo {
+  height: 150px; 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-left: 20px;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d5a9f;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.contact-button {
+  background-color: #3769a3;
+  color: white; 
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.contact-button {
+  color: white !important;
+}
+
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  margin-top: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.65;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #2c5a94;
+}
+
+.hero-text h1 {
+  font-size: 100px;
+  font-weight: 700;
+  margin-bottom: 70px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-button {
+  text-decoration: none;
+  background-color: #3b4a59;
+  color: white;
+  padding: 20px 30px;
+  font-weight: 600;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.about {
+  background-color: #ffffff;
+  padding: 80px 40px;
+  text-align: left;
+  margin-top: 80px;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c5a94;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.doctors {
+  padding: 80px 40px;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.doctors h2 {
+  font-size: 32px;
+  color: #2c5a94;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.doctor-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 80px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+.doctor-profile.reverse {
+  flex-direction: row-reverse;
+}
+
+.doctor-profile img {
+  width: 280px;
+  height: 315px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.doctor-info {
+  flex: 1;
+  min-width: 0;
+}
+
+
+.doctor-info h3 {
+  color: #2c5a94;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.doctor-info p {
+  font-size: 16px;
+  color: #666;
+  line-height: 2.3;
+}
+
+.mission {
+  background-color: #3769a3;
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+  margin-bottom: 80px; 
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mission-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.mission-content p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+
+.footer {
+  background-color: #a9a1a1;
+  color: white;
+  text-align: center;
+  padding: 60px 20px 40px 20px; /* top, right, bottom, left */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+
+
+
+/* CONTACT PAGE */
+
+.contact-section {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #2c5a94;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form {
+  flex: 2;
+}
+
+.contact-form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #2c5a94;
+}
+
+.contact-form span {
+  font-weight: 400;
+  font-size: 12px;
+  color: gray;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+.contact-form button {
+  background-color: #2c5a94;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.contact-details {
+  flex: 1;
+  color: #2c5a94;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 3;
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+.location-section {
+  padding: 80px 40px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.location-section h2 {
+  color: #2c5a94;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.location-section p {
+  color: #2c5a94;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+
+
+/* SERVICES TAB */
+
+.services-section {
+  padding: 80px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.services-section .service {
+  margin-bottom: 60px;
+}
+
+.services-section h2 {
+  color: #2c5a94;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.services-section p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.9;
+}
+
+
+
+/* GALLERY TAB */
+
+.gallery-section {
+  padding: 40px 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gallery-block {
+  margin-bottom: 80px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-block h2 {
+  color: #2c5a94;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-pair {
+  text-align: center;
+}
+
+.image-pair img {
+  width: 180px;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.testimonial-carousel {
+  max-width: 800px;
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+.testimonial {
+  display: none;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+/* APPOINTMENT TAB */
+
+.appointment-section {
+  padding: 80px 40px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.appointment-section h2 {
+  font-size: 24px;
+  color: #2c5a94;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.appointment-section .instruction {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.appointment-form {
+  text-align: left;
+}
+
+.appointment-form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #2c5a94;
+}
+
+.appointment-form span {
+  font-weight: 400;
+  font-size: 12px;
+  color: gray;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.appointment-form button {
+  background-color: #2c5a94;
+  color: white;
+  padding: 12px 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
