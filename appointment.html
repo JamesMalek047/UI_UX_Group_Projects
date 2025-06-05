@@ -7,10 +7,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>NovaSmile | Book an Appointment</title>
   <link rel="stylesheet" href="style.css"/>
-  <!-- Flatpickr CSS with Material Blue Theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
-
-  
 </head>
 <body>
 
@@ -56,12 +52,8 @@
     <label>New or Existing Patient?</label>
     <input type="text" placeholder="New or Existing">
 
-    <!-- <label>Preferred Appointment Day/Time</label>
-    <input type="text" placeholder="e.g. Monday, 2PM"> -->
-    <label>Preferred Appointment Date</label>
-    <input type="text" id="appointmentDate" class="form-control" placeholder="Select a date" required>
-
-
+    <label>Preferred Appointment Day/Time</label>
+    <input type="text" placeholder="e.g. Monday, 2PM">
 
     <label>Are You Booking For Multiple Family Members?</label>
     <input type="text" placeholder="Yes / No or details">
@@ -91,75 +83,3 @@
     </div>
   </div>
   </footer>
-  <!-- Success Popup Modal -->
-<div id="successModal" class="modal">
-  <div class="modal-content">
-    <span class="checkmark">&#10004;</span>
-    <h2>SUCCESS</h2>
-    <p>Thank you for booking an appointment with NovaSmile Dental Clinic.</p>
-    <p>Shortly you will find a confirmation in your email.</p>
-    <button onclick="closeModal()">Continue</button>
-  </div>
-</div>
-<script>
-  const form = document.querySelector('.appointment-form');
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent actual form submission
-    document.getElementById('successModal').style.display = 'block';
-  });
-
-  function closeModal() {
-    document.getElementById('successModal').style.display = 'none';
-    form.reset(); // Optional: clear form after closing
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-<script>
-  const dateInput = document.getElementById('appointmentDate');
-
-  // Set min (tomorrow) and max (30 days from now)
-  const today = new Date();
-  const tomorrow = new Date(today);
-  tomorrow.setDate(today.getDate() + 1);
-  const maxDate = new Date(today);
-  maxDate.setDate(today.getDate() + 30);
-
-  function formatDate(date) {
-    const yyyy = date.getFullYear();
-    const mm = String(date.getMonth() + 1).padStart(2, '0');
-    const dd = String(date.getDate()).padStart(2, '0');
-    return `${yyyy}-${mm}-${dd}`;
-  }
-
-  dateInput.min = formatDate(tomorrow);
-  dateInput.max = formatDate(maxDate);
-
-  // Prevent selecting weekends
-  dateInput.addEventListener('input', function () {
-    const selectedDate = new Date(this.value);
-    const day = selectedDate.getDay();
-    if (day === 0 || day === 6) { // Sunday or Saturday
-      alert("Weekends are not available. Please choose a weekday.");
-      this.value = ''; // Clear the selection
-    }
-  });
-
-   <!-- Flatpickr JS -->
-
-  // Initialize Flatpickr with weekend disabling and date limits
-  flatpickr("#appointmentDate", {
-    dateFormat: "Y-m-d",
-    minDate: new Date().fp_incr(1), // Tomorrow
-    maxDate: new Date().fp_incr(30), // +30 days
-    disable: [
-      function(date) {
-        return (date.getDay() === 0 || date.getDay() === 6); // Disable weekends
-      }
-    ]
-  });
-
-
-  </script>
-
