@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -83,3 +83,240 @@
     </div>
   </div>
   </footer>
+   -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>NovaSmile | Book an Appointment</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Flatpickr CSS with Material Blue Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+
+
+</head>
+
+<body>
+
+  <header>
+    <div class="top-bar"></div>
+    <nav class="navbar">
+      <div class="logo-section">
+        <img src="photos/nova-logo.png" alt="NovaSmile Logo" class="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Dental Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="contact-button">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="appointment-section">
+    <h2>REQUEST AN APPOINTMENT</h2>
+    <p class="instruction">
+      We want to make sure to set aside the time you need for your care. We therefore ask you to fill out this form.
+      We will assess your needs and contact you via phone or email with the best available appointments!
+    </p>
+
+    <form class="appointment-form">
+      <label>Name <span>(required)</span></label>
+      <div class="name-fields">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+      </div>
+
+      <label>Email Address <span>(required)</span></label>
+      <input type="email" placeholder="your@email.com" required>
+
+      <label>Phone Number</label>
+      <input type="tel" placeholder="e.g. 514-123-4567" required>
+
+      <label>Date of Birth (month/day/year) <span>(required)</span></label>
+      <input type="text" id="birthDate" placeholder="MM/DD/YYYY" required>
+
+      <label>Preferred Appointment Date and Time <span>(required)</span></label>
+      <input type="text" id="appointmentDate" placeholder="Select a date and time" required>
+
+
+
+      <label>New or Existing Patient? <span>(required)</span></label>
+      <div class="patient-toggle-group">
+        <input type="radio" id="newPatient" name="patientStatus" value="New" required>
+        <label for="newPatient" class="patient-option">New</label>
+
+        <input type="radio" id="existingPatient" name="patientStatus" value="Existing">
+        <label for="existingPatient" class="patient-option">Existing</label>
+      </div>
+
+
+      <!-- <label>Preferred Appointment Day/Time</label>
+    <input type="text" placeholder="e.g. Monday, 2PM"> -->
+      <label>Select Your Preferred Dentist <span>(required)</span></label>
+      <div class="dentist-toggle-group">
+        <input type="radio" id="dentist-doe" name="preferredDentist" value="Dr. John Doe" required>
+        <label for="dentist-doe" class="dentist-option">Dr. John Doe</label>
+
+        <input type="radio" id="dentist-monroe" name="preferredDentist" value="Dr. Marilyn Monroe" required>
+        <label for="dentist-monroe" class="dentist-option">Dr. Marilyn Monroe</label>
+      </div>
+
+      <label style="display: block;">Select Your Preferred Service <span>(required)</span></label>
+      <small style="display: block; margin: 5px 0 10px 0; color: #6c757d;">
+        Only one treatment per appointment
+      </small>
+      <div class="dentist-toggle-group">
+        <input type="radio" id="service-cleaning" name="preferredService" value="Cleaning" required>
+        <label for="service-cleaning" class="dentist-option">Cleaning</label>
+
+        <input type="radio" id="service-whitening" name="preferredService" value="Whitening">
+        <label for="service-whitening" class="dentist-option">Whitening</label>
+
+        <input type="radio" id="service-orthodontics" name="preferredService" value="Orthodontics">
+        <label for="service-orthodontics" class="dentist-option">Orthodontics</label>
+      </div>
+
+
+
+      <label>Are You Booking For Multiple Family Members? <span>(required)</span></label>
+      <small style="display: block; margin: 5px 0 10px 0; color: #6c757d;">
+        If yes, you will receive a separate form for your family members.
+      </small>
+      <div class="dentist-toggle-group" id="family-booking-group">
+        <input type="radio" id="family-yes" name="familyBooking" value="Yes" required>
+        <label for="family-yes" class="dentist-option">Yes</label>
+
+        <input type="radio" id="family-no" name="familyBooking" value="No">
+        <label for="family-no" class="dentist-option">No</label>
+      </div>
+
+
+      <label>Additional Information</label>
+      <textarea rows="4"></textarea>
+
+      <div class="button-wrapper">
+        <button type="submit">SUBMIT</button>
+      </div>
+    </form>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>NovaSmile Dental Clinic</h3>
+      <p>1285 Rue des Cerisiers<br>
+        Montréal, QC H3Z 2Y7<br>
+        Canada</p>
+
+      <div class="footer-icons">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script>
+    const dateInput = document.getElementById('appointmentDate');
+
+    // Set min (tomorrow) and max (30 days from now)
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    const maxDate = new Date(today);
+    maxDate.setDate(today.getDate() + 30);
+
+    function formatDate(date) {
+      const yyyy = date.getFullYear();
+      const mm = String(date.getMonth() + 1).padStart(2, '0');
+      const dd = String(date.getDate()).padStart(2, '0');
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    dateInput.min = formatDate(tomorrow);
+    dateInput.max = formatDate(maxDate);
+
+    // Prevent selecting weekends
+    dateInput.addEventListener('input', function () {
+      const selectedDate = new Date(this.value);
+      const day = selectedDate.getDay();
+      if (day === 0 || day === 6) { // Sunday or Saturday
+        alert("Weekends are not available. Please choose a weekday.");
+        this.value = ''; // Clear the selection
+      }
+    });
+
+    <!-- Flatpickr JS -->
+
+
+    // Initialize Flatpickr for Birth Date (date only)
+    flatpickr("#birthDate", {
+      dateFormat: "m/d/Y",
+      maxDate: "today"  // Prevent selecting future dates
+    });
+
+    // Initialize Flatpickr for Appointment Date (date + time)
+    flatpickr("#appointmentDate", {
+      enableTime: true,
+      time_24hr: true,
+      minTime: "08:00",
+      maxTime: "17:00",
+      dateFormat: "Y-m-d H:i",
+      minDate: new Date().fp_incr(1),
+      maxDate: new Date().fp_incr(90),
+      disable: [
+        function (date) {
+          return (date.getDay() === 0 || date.getDay() === 6); // Disable weekends
+        }
+      ]
+    });
+
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById('patientStatus').value = this.dataset.value;
+      });
+    });
+
+
+  </script>
+
+  <!-- Success Popup Modal -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="checkmark">&#10004;</span>
+      <h2>SUCCESS</h2>
+      <p>Thank you for booking an appointment with NovaSmile Dental Clinic.</p>
+      <p>Shortly you will find a confirmation in your email.</p>
+      <button onclick="closeModal()">Continue</button>
+    </div>
+  </div>
+  <script>
+    const form = document.querySelector('.appointment-form');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent actual form submission
+      document.getElementById('successModal').style.display = 'block';
+    });
+
+    function closeModal() {
+      document.getElementById('successModal').style.display = 'none';
+      form.reset(); // Optional: clear form after closing
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</body>
