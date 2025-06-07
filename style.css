@@ -398,6 +398,58 @@ body {
   line-height: 1.9;
 }
 
+.service-description {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pricing-table {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.pricing-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+
+.pricing-table th,
+.pricing-table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.pricing-table th {
+  background-color: #f5f5f5;
+  color: #2c5a94;
+  font-weight: 600;
+}
+
+.general-insurance-note {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #f3f3ed; /* Matches your 'wall base' color */
+  border-left: 6px solid #2c5a94;
+  font-family: 'Montserrat', sans-serif;
+  color: #2c5a94;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  text-align: center;
+}
+
+
 
 
 /* GALLERY TAB */
