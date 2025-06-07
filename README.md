@@ -1,3 +1,7 @@
 # UI_UX_Group_Projects
 
-Git Push Testing
+Devoir 2: Site de service
+
+Type: Clinic Dentaire
+
+Nom: NovaSmile
